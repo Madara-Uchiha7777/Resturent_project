@@ -1,0 +1,77 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+
+<!-- 🌟 Google Fonts for a Premium Feel -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+
+<div class="container mt-5" style="font-family: 'Raleway', sans-serif;">
+  <h1 class="text-center mb-5 fw-bold text-uppercase" 
+      style="font-family: 'Cinzel', serif; color: #b29600; letter-spacing: 2px;">
+    Welcome to MyRestaurant
+  </h1>
+
+  <!-- Section 1 -->
+  <div class="row align-items-center mb-5">
+    <div class="col-md-6 text-center">
+      <img src="{% static 'img/pexels-elevate-1267320.jpg' %}" 
+           class="img-fluid rounded-4 shadow-lg" 
+           alt="Food">
+    </div>
+    <div class="col-md-6 mt-4 mt-md-0">
+      <h3 class="fw-semibold mb-3" style="font-family: 'Cinzel', serif; color: #4a3d1f;">
+        Delicious Food Made with Love ❤️
+      </h3>
+      <p class="text-secondary fs-5">
+        Every dish is crafted with passion using the finest ingredients, ensuring every bite is full of flavor and freshness.
+      </p>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div class="text-center mb-5">
+    <hr class="w-50 mx-auto border-3 opacity-75" style="color: #b29600;">
+  </div>
+
+  <!-- Section 2 -->
+  <div class="row align-items-center flex-md-row-reverse mb-5">
+    <div class="col-md-6 text-center">
+      <img src="{% static 'img/pexels-fotios-photos-776538.jpg' %}" 
+           class="img-fluid rounded-4 shadow-lg" 
+           alt="Indoor Dining">
+    </div>
+    <div class="col-md-6 mt-4 mt-md-0">
+      <h3 class="fw-semibold mb-3" style="font-family: 'Cinzel', serif; color: #4a3d1f;">
+        Great Indoor Dining 🪑
+      </h3>
+      <p class="text-secondary fs-5">
+        Experience a warm and inviting ambiance, perfect for intimate dinners or family gatherings in comfort and style.
+      </p>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div class="text-center mb-5">
+    <hr class="w-50 mx-auto border-3 opacity-75" style="color: #b29600;">
+  </div>
+
+  <!-- Section 3 -->
+  <div class="row align-items-center mb-5">
+    <div class="col-md-6 text-center">
+      <img src="{% static 'img/pexels-evonics-1058277.jpg' %}" 
+           class="img-fluid rounded-4 shadow-lg" 
+           alt="Friends and Family">
+    </div>
+    <div class="col-md-6 mt-4 mt-md-0">
+      <h3 class="fw-semibold mb-3" style="font-family: 'Cinzel', serif; color: #4a3d1f;">
+        Good Place to Get Together 👥
+      </h3>
+      <p class="text-secondary fs-5">
+        Celebrate moments with your loved ones over delicious food and a welcoming atmosphere that feels just like home.
+      </p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+

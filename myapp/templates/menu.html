@@ -1,0 +1,155 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content1 %}
+<!-- ✨ Premium Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<div class="container mt-5" style="font-family: 'Poppins', sans-serif;">
+  
+  <!-- 🏷️ Title -->
+  <h2 class="text-center mb-4 fw-bold text-uppercase display-6"
+      style="font-family: 'Playfair Display', serif; color: #c19a3d; letter-spacing: 2px;">
+    Our Menu
+  </h2>
+
+  <!-- 🔍 Search Bar -->
+  <div class="row mb-5">
+    <div class="col-md-6 mx-auto">
+      <input
+        type="text"
+        id="menuSearch"
+        class="form-control form-control-lg shadow-sm"
+        placeholder="Search for food (e.g., Pizza, Burger, Biriyani)"
+        onkeyup="filterMenu()"
+      >
+    </div>
+  </div>
+
+  <!-- 🍽️ Menu Items -->
+  <div class="row" id="menuItems">
+    <div class="col-md-4 mb-4">
+      <div class="card border-0 shadow-sm rounded-4">
+        <img src="{% static 'img/tacos2.jpg' %}" class="card-img-top rounded-top-4" alt="Tacos">
+        <div class="card-body text-center">
+          <h5 class="card-title fw-semibold" style="font-family: 'Playfair Display', serif;">Tacos</h5>
+          <p class="card-text text-muted small">Delicious Tacos</p>
+          <p class="fw-bold text-dark fs-5">₹50</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card border-0 shadow-sm rounded-4">
+        <img src="{% static 'img/pexels-edwardeyer-1049620.jpg' %}" class="card-img-top rounded-top-4" alt="Pizza">
+        <div class="card-body text-center">
+          <h5 class="card-title fw-semibold" style="font-family: 'Playfair Display', serif;">Pizza</h5>
+          <p class="card-text text-muted small">OnePiece Pizza Makes You Happy</p>
+          <p class="fw-bold text-dark fs-5">₹250</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card border-0 shadow-sm rounded-4">
+        <img src="{% static 'img/pexels-valeriya-1639565.jpg' %}" class="card-img-top rounded-top-4" alt="Burger">
+        <div class="card-body text-center">
+          <h5 class="card-title fw-semibold" style="font-family: 'Playfair Display', serif;">Burger</h5>
+          <p class="card-text text-muted small">OG Burger Take A Bite</p>
+          <p class="fw-bold text-dark fs-5">₹200</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card border-0 shadow-sm rounded-4">
+        <img src="{% static 'img/pexels-mumtahina-tanni-1080117-6260921.jpg' %}" class="card-img-top rounded-top-4" alt="Biriyani">
+        <div class="card-body text-center">
+          <h5 class="card-title fw-semibold" style="font-family: 'Playfair Display', serif;">Biriyani</h5>
+          <p class="card-text text-muted small">OG Shop Special Mutton Biriyani</p>
+          <p class="fw-bold text-dark fs-5">₹200</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card border-0 shadow-sm rounded-4">
+        <img src="{% static 'img/pexels-owpictures-106343.jpg' %}" class="card-img-top rounded-top-4" alt="Fried Chicken">
+        <div class="card-body text-center">
+          <h5 class="card-title fw-semibold" style="font-family: 'Playfair Display', serif;">Fried Chicken</h5>
+          <p class="card-text text-muted small">Delicious Fried Chicken Take A Bite</p>
+          <p class="fw-bold text-dark fs-5">₹250</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card border-0 shadow-sm rounded-4">
+        <img src="{% static 'img/pexels-igor-ovsyannykov-56123-205961.jpg' %}" class="card-img-top rounded-top-4" alt="Desserts">
+        <div class="card-body text-center">
+          <h5 class="card-title fw-semibold" style="font-family: 'Playfair Display', serif;">Desserts</h5>
+          <p class="card-text text-muted small">After Eat Take A Bite</p>
+          <p class="fw-bold text-dark fs-5">₹120</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card border-0 shadow-sm rounded-4">
+        <img src="{% static 'img/pexels-jeshoots-3631.jpg' %}" class="card-img-top rounded-top-4" alt="Desserts">
+        <div class="card-body text-center">
+          <h5 class="card-title fw-semibold" style="font-family: 'Playfair Display', serif;">Ice Cream</h5>
+          <p class="card-text text-muted small">Feel the Magic of Ice Cream</p>
+          <p class="fw-bold text-dark fs-5">₹150</p>
+        </div>
+      </div>
+    </div>
+
+<div class="col-md-4 mb-4">
+      <div class="card border-0 shadow-sm rounded-4">
+        <img src="{% static 'img/pexels-timur-weber-8679370.jpg' %}" class="card-img-top rounded-top-4" alt="Desserts">
+        <div class="card-body text-center">
+          <h5 class="card-title fw-semibold" style="font-family: 'Playfair Display', serif;">Mocktail</h5>
+          <p class="card-text text-muted small">After Eat Take A Sip</p>
+          <p class="fw-bold text-dark fs-5">₹120</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card border-0 shadow-sm rounded-4">
+        <img src="{% static 'img/pexels-pixabay-158053.jpg' %}" class="card-img-top rounded-top-4" alt="Desserts">
+        <div class="card-body text-center">
+          <h5 class="card-title fw-semibold" style="font-family: 'Playfair Display', serif;"></h5>
+          <p class="card-text text-muted small">Its Healthest Drink Ever Sip It </p>
+          <p class="fw-bold text-dark fs-5">₹100</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ⚠️ No Results -->
+  <div id="noResults" class="text-center text-muted mt-4" style="display: none;">
+    <p class="fw-semibold"><strong>No results found 😕</strong></p>
+  </div>
+</div>
+
+<!-- 🔍 JS Search Filter -->
+<script>
+function filterMenu() {
+  const input = document.getElementById('menuSearch').value.toLowerCase();
+  const items = document.querySelectorAll('#menuItems .col-md-4');
+  let anyVisible = false;
+
+  items.forEach(item => {
+    const text = item.textContent.toLowerCase();
+    const visible = text.includes(input);
+    item.style.display = visible ? '' : 'none';
+    if (visible) anyVisible = true;
+  });
+
+  document.getElementById('noResults').style.display = anyVisible ? 'none' : '';
+}
+</script>
+
+{% endblock %}
